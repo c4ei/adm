@@ -5,7 +5,7 @@ const MembershipTransactions = require.main.require('./models/MembershipTransact
 const ProductImages = require.main.require('./models/ProductImages');  
 const CategoryModel = require.main.require('./models/Categories');  
 //const SubscriptionModel = require('./models/subscription') 
-const sequelize = new Sequelize('construction_app_admin', 'root', '', {
+const sequelize = new Sequelize('shop_adm', 'root', '', {
   host: 'localhost',
   dialect: 'mysql',
   pool: { 

@@ -2,9 +2,9 @@ var mysql = require('mysql2');
 var mysqlPool = mysql.createPool({ 
     connectionLimit: 10,  
     host: 'localhost',
-    user: 'root', 
+    user: 'adm', 
     password: '', 
-    database: 'construction_app_admin', 
+    database: 'shop_adm', 
     waitForConnections: true,
     debug    :  false,   
     queueLimit: 30,
