@@ -1,11 +1,14 @@
+const dotenv = require('dotenv');
+dotenv.config();
+
 const Sequelize = require('sequelize')
-const SubscriptionModel = require.main.require('./models/subscription'); 
-const ProductsModel = require.main.require('./models/products'); 
+const SubscriptionModel = require.main.require('./models/Subscription'); 
+const ProductsModel = require.main.require('./models/Products'); 
 const MembershipTransactions = require.main.require('./models/MembershipTransactions'); 
 const ProductImages = require.main.require('./models/ProductImages');  
 const CategoryModel = require.main.require('./models/Categories');  
 //const SubscriptionModel = require('./models/subscription') 
-const sequelize = new Sequelize('shop_adm', 'root', '', {
+const sequelize = new Sequelize('shop_adm', process.env.DB_ID, process.env.DB_PWD, {
   host: 'localhost',
   dialect: 'mysql',
   pool: { 

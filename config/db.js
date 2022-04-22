@@ -1,9 +1,11 @@
+const dotenv = require('dotenv');
+dotenv.config();
 var mysql = require('mysql2'); 
 var mysqlPool = mysql.createPool({ 
     connectionLimit: 10,  
     host: 'localhost',
-    user: 'adm', 
-    password: '', 
+    user: process.env.DB_ID, 
+    password: process.env.DB_PWD, 
     database: 'shop_adm', 
     waitForConnections: true,
     debug    :  false,   
